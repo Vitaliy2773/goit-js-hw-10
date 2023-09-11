@@ -28,10 +28,11 @@ fetchBreeds()
         return `<option value="${item.id}">${item.name}</option>`
     })
         .join("");
+     selector.classList.remove('is-hidden');
     new SlimSelect({
         select: selector,
-        data: item
     });
+   
     })
 .catch(onFetchError);
 
@@ -39,7 +40,6 @@ fetchBreeds()
 
 function onChangeSelect(e) {
     loader.classList.replace('is-hidden', 'loader');
-    selector.classList.add('is-hidden');
     catInfo.classList.add('is-hidden');
 
     const breedId = e.currentTarget.value;
@@ -56,7 +56,7 @@ function onChangeSelect(e) {
 };
 
 function onFetchError(error) {
-    selector.classList.remove('is-hidden');
+    
     loader.classList.replace('loader', 'is-hidden');
 
     Notiflix.Notify.failure('Oops! Something went wrong! Try reloading the page or select another cat breed!')
