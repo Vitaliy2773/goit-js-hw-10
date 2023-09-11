@@ -1,3 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, Roboto, sans-serif;
+  background-color: orange;
+  color: black;
+  line-height: 1.5;
+}
+
+img {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  border: 10px solid #0d161b;
+}
+
+.is-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .loader {
   position: relative;
   width: 64px;
@@ -30,4 +61,16 @@
   100% {
     transform: translate(0px, 0px) rotate(-45deg);
   }
+}
+
+.cat-information {
+  margin-top: 30px;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 500px;
 }
