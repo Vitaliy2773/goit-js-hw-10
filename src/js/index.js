@@ -8,12 +8,13 @@ import Notiflix from "notiflix";
 
 
 const ref = {
+    class: document.querySelector('breed-select-1'),
     selector: document.querySelector('.breed-select'),
     catInfo: document.querySelector('.cat-info'),
     loader: document.querySelector('.loader'),
     error: document.querySelector('.error'),
 };
-const { selector, catInfo, loader, error } = ref;
+const { selector, catInfo, loader, error, class } = ref;
 
 loader.classList.replace('loader', 'is-hidden');
 error.classList.add('is-hidden');
